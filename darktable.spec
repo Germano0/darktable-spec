@@ -44,8 +44,8 @@ BuildRequires: flickcurl-devel
 BuildRequires: gcc
 %endif
 %if 0%{?el8}
-#BuildRequires: gcc-toolset-11
-BuildRequires: gcc-toolset-11-gcc-c++
+BuildRequires: gcc-toolset-11
+#BuildRequires: gcc-toolset-11-gcc-c++
 %endif
 %if 0%{?fedora}
 BuildRequires: gmic-devel
@@ -179,7 +179,7 @@ sed -i -e 's, \"external/CL/\*\.h\" , ,' src/CMakeLists.txt
 # 
 #
 %if 0%{?el8}
-#. /opt/rh/gcc-toolset-11/enable
+. /opt/rh/gcc-toolset-11/enable
 #. /opt/rh/gcc-toolset-11-gcc-c++/enable
 # scl enable gcc-toolset-11 - <<\EOF
 
